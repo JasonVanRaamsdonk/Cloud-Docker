@@ -41,6 +41,8 @@
 
 > docker images
 
+![docker_images](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/docker_images.jpg)
+
 - run the web app
 
 > docker run -p 80:5000 -d mywebapp
@@ -48,6 +50,8 @@
 - check if running
 
 > docker ps
+
+![docker_running](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/docker_running_image.jpg)
 
 - stop running the container
 
@@ -67,3 +71,5 @@
 > docker run -p 80:5000 -d baselm/mywebapp
 
 - open the public dns from the EC2 instance to view the web page
+
+![flask](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/browser_running.jpg)
