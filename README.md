@@ -1,6 +1,10 @@
 # Docker
 
-## Create EC2 instance
+## General Information
+
+- *Docker is a software container platform. Developers use Docker to ship the software quickly and to eliminate interoperability problem of software dependencies. A container is used to package software in a format that can run isolated on a shared operating system.*
+
+## EC2 instance
 
 - Create an EC2 instance
 - Use **Ubuntu Server 18.04 LTS** as AMI type.
