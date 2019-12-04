@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER yungrazr
+MAINTAINER JasonVanRaamsdonk
 RUN apt-get update
 RUN apt-get install -y python3 python3-pip
 ADD /myapp /myapp
@@ -9,4 +9,4 @@ RUN curl -fsSL https://get.docker.com/|sh
 RUN pip3 install -r /myapp/requirements.txt
 EXPOSE 5000 8080
 WORKDIR /myapp
-CMD python3 main.py
+CMD python3 serve.py
