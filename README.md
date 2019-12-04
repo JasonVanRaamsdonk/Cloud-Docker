@@ -28,3 +28,40 @@
 - reboot instance
 
 > sudo reboot
+
+- clone the repo with the docker file inside
+
+> git clone https://github.com/JasonVanRaamsdonk/Cloud-Docker
+
+- within the directory build a docker image
+
+> docker build -t mywebapp .
+
+- view all images
+
+> docker images
+
+- run the web app
+
+> docker run -p 80:5000 -d mywebapp
+
+- check if running
+
+> docker ps
+
+- stop running the container
+
+> docker stop < container-id >
+
+### Pull and run a ready made instance
+
+- create a new EC2 instance and log in
+
+> ssh -i C:\Users\jason\Downloads\downloads_inner\permission_keys\dockerkey.pem ubuntu@54.237.208.217
+
+- install docker once again
+- pull ready-made instance, then run application
+
+> docker pull baselm/mywebapp
+
+> docker run -p 80:5000 -d baselm/mywebapp
