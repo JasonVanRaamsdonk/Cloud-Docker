@@ -65,3 +65,5 @@
 > docker pull baselm/mywebapp
 
 > docker run -p 80:5000 -d baselm/mywebapp
+
+- open the public dns from the EC2 instance to view the web page
