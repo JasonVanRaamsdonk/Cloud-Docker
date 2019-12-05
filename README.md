@@ -73,3 +73,11 @@
 - open the public dns from the EC2 instance to view the web page
 
 ![flask](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/browser_running.jpg)
+
+- create custom Docker file, along with an *index.html* & *contact.html* page.
+
+- Create a **Flask** application to open these files via *app.route()*
+
+- build docker container and test the Flask application
+
+![flask_app]()
