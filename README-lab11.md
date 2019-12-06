@@ -6,19 +6,19 @@
 
 - ensure all contain the following **Security Group**
 
-![]()
+![sg](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/security_group.png)
 
 - Initialize the *Manager* instance as the manager node:
 
 > sudo docker swarm init
 
-- insert swarm init image
+![swarm_init](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/swarm_init.jpg)
 
 - Access the *worker* instances and join them to the *manager* node:
 
 > sudo docker swarm join --token SWMTKN-1-1lzztf0ayroum6iandqlvpim2624g0t5tyhdl4ivkaxhcc6yoh-byfpz35n4cfejbewqvjr15m85 172.31.93.51:2377
 
-- inserrt join image
+![join](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/swarm_join.jpg)
 
 - verify all workers have joined
 
@@ -34,7 +34,7 @@
 
 - view **nginx** running in browser
 
-- isnert screenshot
+![nginx](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/nginx.png)
 
 ## Next
 
@@ -56,7 +56,7 @@
 
 - open *webserver* in browser using the *public IP*
 
-- insert image
+![upload_file](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/uploaddile.png)
 
 - upload an image and check if its there:
 
@@ -83,7 +83,7 @@
   --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
   dockersamples/visualizer
 
-- add screenshot
+![visualise_1](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/vertical_small.png)
 
 ## Task 1: Vertical Scaling using Docker Swarm
 
@@ -91,7 +91,7 @@
 
 > sudo docker service scale webservice1=10
 
-- insert screenshot
+![visualise_2](images/vertical_large.png)
 
 ## Task 2: Horizontal Scaling
 
@@ -113,4 +113,4 @@
 
 - Visit the visualisation service at port 8080 to see all nodes and containers in the swarm.
 
-- insert image of swarm horz
+![visualise_3](images/horizontal_large.png)
