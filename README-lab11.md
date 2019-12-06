@@ -6,9 +6,7 @@
 
 - ensure all contain the following **Security Group**
 
-
-
-- image
+![]()
 
 - Initialize the *Manager* instance as the manager node:
 
@@ -115,4 +113,4 @@
 
 - Visit the visualisation service at port 8080 to see all nodes and containers in the swarm.
 
-- insert image of swarm horzy
+- insert image of swarm horz
