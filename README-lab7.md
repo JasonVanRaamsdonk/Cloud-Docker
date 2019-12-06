@@ -80,5 +80,5 @@
 
 - build docker container and test the Flask application
 
-![flask_app](https://github.com/JasonVanRaamsdonk/Cloud-Docker/blob/master/images/Screenshot%20(69).png)
+![flask_app](images/flask_bio.png)
 
