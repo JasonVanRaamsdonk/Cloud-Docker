@@ -6,7 +6,7 @@
 
 - ensure all contain the following **Security Group**
 
-- image
+
 
 - image
 
