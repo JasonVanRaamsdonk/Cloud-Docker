@@ -114,3 +114,51 @@
 - Visit the visualisation service at port 8080 to see all nodes and containers in the swarm.
 
 ![visualise_3](images/horizontal_large.png)
+
+### Docker Swarm Monitoring
+
+- From the manager node *ssh* access. Pull the following github repository
+
+> git clone https://github.com/baselm/lab-extra.git
+
+- Update the *Docker-SG* with the following rules:
+  - TCP: 9323, source: 0.0.0.0/0
+  - TCP: 9090, source: 0.0.0.0/0
+  - TCP: 3000, source: 0.0.0.0/0
+  - TCP: 9093, source: 0.0.0.0/0
+  - TCP: 9094, source: 0.0.0.0/0
+
+- *cd* into the the newly cloned directory and run the folling command:
+
+> ADMIN_USER=admin
+ADMIN_PASSWORD=admin
+SLACK_URL=https://hooks.slack.com/services/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
+SLACK_CHANNEL=devops-alerts
+SLACK_USER=alertmanager
+docker stack deploy -c docker-compose.yml mon
+
+- join the DT228 Slack channel @:
+
+> https://dt228cloudcomputing.slack.com/
+
+- Access The **Grafana** Dashboard on port *3000* and sign in using:
+  - username: **admin**
+  - password: **admin**
+
+![grafana_login](images/grafana_login.png)
+
+![grafana_dash](images/grafana.png)
+
+- Perform the following command to perform a stress test on the docker swarm:
+
+> docker run --rm -it progrium/stress --cpu 2 --io 1 --vm 2 --vm-bytes 128M --timeout 200s
+
+- Access the Alert Dashboard on Port *9093*:
+
+![alert_dash](images/alert_service.png)
+
+- From the manager, to verify that all services are fully converged run the following command:
+
+> docker service ls
+
+![converge](images/converge.png)
