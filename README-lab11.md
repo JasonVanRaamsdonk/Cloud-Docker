@@ -162,3 +162,7 @@ docker stack deploy -c docker-compose.yml mon
 > docker service ls
 
 ![converge](images/converge.png)
+
+- Updated state of visualizer
+
+![updated_vis](images/visual_after_running.png)
